@@ -1,0 +1,10 @@
+.crest {
+    display: inline;
+  }
+
+.crest img{
+    max-height: 50px;
+    max-width: 25px;
+    object-fit: cover;
+
+}
