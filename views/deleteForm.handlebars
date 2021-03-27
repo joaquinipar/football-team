@@ -1,0 +1,19 @@
+<div>
+    <a href="/"><button class="btn btn-primary">Back</button></a>
+</div>
+<div style="display: flex;justify-content: center;">
+    <form action='/deleteTeam/{{{data.id}}}' method='POST' enctype="multipart/form-data">
+        <div class="card">
+        <div class="card-header">
+            Delete {{{data.teamName}}}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Are you sure?</h5>
+            <p class="card-text">There's no return after this action.</p>
+            <div class="form-group">
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+        </div>
+    </form>
+</div>

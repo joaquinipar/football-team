@@ -1,0 +1,27 @@
+<table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Crest</th>
+                <th scope="col">Name</th>
+                <th scope="col">Country</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>  
+            {{#each data.equipos}}
+                <tr>
+                    <th scope="row" class="crest"> <img src={{{this.crestUrl}}}> </th>
+                    <td class="names">{{{this.name}}}</td>
+                    <td>{{{this.area.name}}}</td>
+                    <td>
+                        <ul id="changes">
+                            <a href="/update/{{{this.id}}}"><button  type="button" class="btn btn-primary update">Update</button></a>
+                            <a href="/add"><button  type="button" class="btn btn-success add">Add</button></a>
+                            <a href="/delete/{{{this.id}}}"><button  type="button" class="btn btn-danger delete">Delete</button></a>
+                        </ul>
+                    </td>
+                </tr>
+            {{/each}}
+            {{>team-row teamName=data.teamName teamCrest=data.teamCrest teamCountry=data.teamCountry }}
+            </tbody>
+          </table>

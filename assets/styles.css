@@ -3,8 +3,16 @@
   }
 
 .crest img{
-    max-height: 50px;
+    max-height: 150px;
     max-width: 25px;
     object-fit: cover;
 
+}
+
+ul#changes{
+  list-style: none;
+}
+
+ul#changes li{
+  display:inline;
 }

@@ -1,0 +1,40 @@
+<div>
+    <a href="/"><button class="btn btn-dark">Back</button></a>
+</div>
+
+<div style="display: flex;justify-content: center;">
+    <form action='/updateTeam' method='POST' enctype="multipart/form-data">
+        <div class="card">
+        <div class="card-header">
+            Update team
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Change attributes of the team</h5>
+            
+                <div class="form-group">
+                    <label for='name'>Team name</label>
+                    <input name='name' id='name' type='text' value='{{data.name}}' class='form-control {{data.validationClassName}}'>
+                </div>
+                <div class="form-group">
+                    <label for='country'>Team country</label>
+                    <input name='country' id='country' type='text' value='{{data.country}}' class='form-control {{data.validationClassCountry}}'>
+                </div>
+                <div class="form-group">
+                    <label for='crestURL'>Team crest URL</label>
+                    <input name='crestURL' id='crestURL' type='text' value='{{data.crestURL}}' class='form-control {{data.validationClassURL}}'>
+                </div>
+                <div class="form-group">
+                    <label for='teamId'>Team ID</label>
+                    <input name='teamId' id='teamId' type='number' value='{{data.teamId}}' class='form-control {{data.validationClassId}}'>
+                </div>
+                <div class="form-group">
+                    <label for='originalTeamId'>Original ID</label>
+                    <input readonly name='originalTeamId' id='originalTeamId' type='number' value='{{data.teamId}}' class='form-control'>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
